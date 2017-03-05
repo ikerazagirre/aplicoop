@@ -54,8 +54,17 @@ if ($_SESSION['image_is_logged_in'] == 'true') {
 
         <div class="container">
 
-            <h1><?php echo $title1; ?></h1>
+             <div class='breadcrumb'>
+                <a class="breadcrumb-back" href="#" onclick="window.history.back();return false;"></a>
+                <ul class="breadcrumb-options">
+                    <li class="breadcrumb-option">
+                        <a href='admint.php'>Administración</a> 
+                    </li>
+                    <li class="breadcrumb-option"><?php echo $title1; ?></li>
+                </ul>
+            </div>
 
+            <h1><?php echo $title1; ?></h1>
 
             <form action="<?php echo $cap_link; ?>" method="post" name="prod" id="prod">
 

@@ -33,7 +33,7 @@ if ($_SESSION['image_is_logged_in'] == 'true') {
     <html>
     <head>
         <?php include 'head.php'; ?>
-        <title>aplicoop - mis cuentas</title>
+        <title>aplicoop - pedidos</title>
 
         <script type="text/javascript" src="calendar/calendar.js"></script>
         <script type="text/javascript" src="calendar/lang/calendar-es.js"></script>
@@ -69,6 +69,16 @@ if ($_SESSION['image_is_logged_in'] == 'true') {
         ?>
 
         <div class="container">
+            
+            <div class='breadcrumb'>
+                <a class="breadcrumb-back" href="#" onclick="window.history.back();return false;"></a>
+                <ul class="breadcrumb-options">
+                    <li class="breadcrumb-option">
+                        <a href='admint.php'>Administración</a> 
+                    </li>
+                    <li class="breadcrumb-option"><?php echo $title1; ?></li>
+                </ul>
+            </div>
 
             <h1><?php echo $title1; ?></h1>
 

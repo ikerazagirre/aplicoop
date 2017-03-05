@@ -1,0 +1,53 @@
+@import '../config/variables';
+
+$breadcrumb-height: 30px;
+$breadcrumb-link-color: $color-main;
+
+.breadcrumb {
+    width: 100%;
+    height: $breadcrumb-height;
+    display: flex;
+    align-items: center; 
+}
+
+.breadcrumb-back {
+    margin-right: 20px;
+
+    &::after {      
+        font: normal normal normal 14px/1 FontAwesome;  
+        content: "\f177";        
+        font-size: 1.1rem;
+        color: $breadcrumb-link-color;
+    }
+}
+
+.breadcrumb-options {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.breadcrumb-option {  
+    font-size: .7rem;
+    text-transform: uppercase;
+
+    &:not(:last-child) {        
+        &::after {
+            content: '/';
+            padding: 0 10px;
+        }
+    }
+
+    &:last-child {
+        flex: 1;
+    }
+
+    > a {
+        display: inline-block;
+        color: $breadcrumb-link-color;
+        border-bottom: 1px dotted transparent;
+
+        &:hover {
+           border-bottom-color: currentColor;
+        }
+    }
+}

@@ -155,6 +155,16 @@ if ($_SESSION['image_is_logged_in'] == 'true') {
 
         <div class="container">
 
+            <div class='breadcrumb'>
+                <a class="breadcrumb-back" href="#" onclick="window.history.back();return false;"></a>
+                <ul class="breadcrumb-options">
+                    <li class="breadcrumb-option">
+                        <a href='admint.php'>Administración</a> 
+                    </li>
+                    <li class="breadcrumb-option">Grupos de pedidos y cestas</li>
+                </ul>
+            </div>
+
             <h1>Grupos de pedidos y cestas</h1>
 
             <?php echo $nota; ?>

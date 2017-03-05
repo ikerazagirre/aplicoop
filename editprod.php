@@ -257,7 +257,7 @@ if ($_SESSION['image_is_logged_in'] == 'true') {
     /// Si no existeix anem a CREAR///
 
     $supernom = strtoupper($gnom);
-    $head3 = " >>><a href='editprod.php?id=" . $gref . "'>Editar producto " . $gnom . "</a>";
+    $head3 = "Editar producto " . $gnom;
     $tit = 'Editar producto ' . $supernom;
     $subtit = 'Per editar un producte realitza els canvis en la fitxa i clica el botó GUARDAR
 	al final per fer-los efectius. Per eliminar un producte clica el boto ELIMINAR.';
@@ -271,8 +271,8 @@ if ($_SESSION['image_is_logged_in'] == 'true') {
 					{window.location=\'editprod.php?id=' . $gref . '&id3=elim\'}">Eliminar  <i class="fa fa-trash-o" aria-hidden="true"></i></button></div>';
     if (!$gref) {
         $supernom = strtoupper($pnom);
-        $head3 = ">>><a href='editprod.php'>crear nou producte</a>";
-        $tit = '<h1>Crear nuevo producto</h1>';
+        $head3 = "Crear nuevo producto</a>";
+        $tit = 'Crear nuevo producto';
         $subtit = 'Para crear uner crear un nou producte omple el formulari i clica el botó GUARDAR al final.';
         $formact = "editprod.php?id3=create";
         $width = "100%";
@@ -285,6 +285,20 @@ if ($_SESSION['image_is_logged_in'] == 'true') {
     <?php include 'menu.php'; ?>
     <div class="page">
         <div class="container">
+
+            <div class='breadcrumb'>
+                <a class="breadcrumb-back" href="#" onclick="window.history.back();return false;"></a>
+                <ul class="breadcrumb-options">
+                    <li class="breadcrumb-option">
+                        <a href='admint.php'>Administración</a> 
+                    </li>
+                    <li class="breadcrumb-option">
+                        <a href='productes.php'>Productos</a> 
+                    </li>
+                    <li class="breadcrumb-option"><?php echo $head3; ?></li>
+                </ul>
+            </div>
+
             <h1><?php echo $tit; ?></h1>
 
             <?php

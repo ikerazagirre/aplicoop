@@ -409,6 +409,16 @@ function selectNumFact($numero)
         //////////////////////////////////
         ?>
 
+        <div class='breadcrumb'>
+                <a class="breadcrumb-back" href="#" onclick="window.history.back();return false;"></a>
+                <ul class="breadcrumb-options">
+                    <li class="breadcrumb-option">
+                        <a href='admint.php'>Administración</a> 
+                    </li>
+                    <li class="breadcrumb-option">Crear devoluciones o facturas fuera de proceso</li>
+                </ul>
+            </div>
+
         <h1>Crear devoluciones o facturas fuera de proceso</h1>
 
         <div class="box">

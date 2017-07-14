@@ -9,7 +9,7 @@ if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
     // first check if the number submitted is correct
     $number = $_POST['txtNumber'];
 
-    if (md5($number) == $_SESSION['image_random_value']) {
+    //if (md5($number) == $_SESSION['image_random_value']) {
         //include 'config/configuracio.php';
 
         $userId = $_POST['txtUserId'];
@@ -62,9 +62,9 @@ if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
             $errorMessage = 'Lo sentimos, el usuario y/o password son err&oacute;neos. Prueba otra vez.';
             include 'config/disconect.php';
         }
-    } else {
-        $errorMessage = 'Lo sentimos, el captcha no es correcto. Prueba otra vez.';
-    }
+    // } else {
+    //     $errorMessage = 'Lo sentimos, el captcha no es correcto. Prueba otra vez.';
+    // }
 }
 
 ?>
@@ -97,13 +97,13 @@ if (isset($_POST['txtUserId']) && isset($_POST['txtPassword'])) {
                 <input type="password" id="txtPassword" name="txtPassword" class="form-control">
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label for="txtNumber">Captcha</label>
                 <input type="number" id="txtNumber" name="txtNumber" class="form-control" autocomplete="off">
                 <div class="u-text-center u-mt-1">
                     <img class="login-captcha" src="randomImage.php">
                 </div>
-            </div>
+            </div> -->
 
             <?php
             if ($errorMessage != '') {

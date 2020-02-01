@@ -7,10 +7,10 @@ $dbuser = 'root'; //nom de l'usuari de la base de dades
 $dbpass = ''; //password de la base de dades per l'usuari
 $dbname = 'aplicoop_v3'; //nom de la base de dades
 //$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
-$conn = mysql_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
-mysql_query("SET NAMES 'utf8'"); //Suposo que s'ha de posar aquÃ­
+$conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
+mysqli_query("SET NAMES 'utf8'"); //Suposo que s'ha de posar aquÃ­
 //mysql_select_db($dbname);
-mysql_select_db($dbname);
+mysqli_select_db($dbname);
 //////////////////////////////////////////////////////////
 // Aquí van els elements de configuració de cada coope ///
 //////////////////////////////////////////////////////////
